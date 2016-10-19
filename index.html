@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title> computer art </title>
+		<meta charset="utf-8">
+		<style>
+
+			html,body{
+				padding: 0;
+				margin: 0;
+			}
+			
+			#defaultCanvas0 {
+				/*border:1px solid pink;*/
+			}
+
+		</style>
+
+	</head>
+	<body>
+
+		<script src="js/p5.min.js"></script>
+		<script src="brushes/example.js"></script>
+		<script>
+			
+
+			function setup(){
+
+				createCanvas( innerWidth, innerHeight );
+
+			}
+			function draw(){
+				
+				circlePair( mouseX, mouseY, 25 );
+
+			}
+
+
+		</script>
+
+	</body>
+</html>
