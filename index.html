@@ -22,26 +22,52 @@
 	<body>
 
 		<script src="js/p5.min.js"></script>
-		<script src="brushes/example.js"></script>
-		<script src="brushes/square.js"></script>
+		<script src="brushes/base_brush.js"></script>
+		<script src="brushes/atom.js"></script>
 		<script>
 
 
+			// function preload(){
+			// 	square_preload();
+			// }
+
+			// function setup(){
+			// 	createCanvas( innerWidth, innerHeight );
+			// 	square_setup();
+			// }
+
+			// function draw(){
+				
+			// 	// circlePair( mouseX, mouseY, 25 );
+			// 	square( mouseX, mouseY );
+
+			// }
+
+			var atoms = [];
+
 			function preload(){
-				square_preload();
+				
 			}
 
 			function setup(){
 				createCanvas( innerWidth, innerHeight );
-				square_setup();
+			}
+
+			function update(){
+				for (var i = 0; i < atoms.length; i++) {
+					atoms[i].update();
+				}
 			}
 
 			function draw(){
+				update();
 				
-				// circlePair( mouseX, mouseY, 25 );
-				square( mouseX, mouseY );
+				if( mouseIsPressed ){
+					var a = new Atom(mouseX,mouseY);
+					atoms.push( a );
+				}
 
-			}
+			}			
 
 
 		</script>
