@@ -8,29 +8,6 @@ function circlePair( x, y, s ){
 
 
 
-// var myText
-// var i
-// var myFont
-// jenBrush
-
-
-// var steCount
-// stormyNight
-
-// whee
-
-// circles
-
-// var idx
-// bubbleBrush
-
-// pepeBrush
-// var imgBrush
-
-// var abcd
-
-
-
 
 
 
