@@ -1,10 +1,14 @@
 function Atom(x,y){
-	this.dx = 2;
-	this.dy = 2;
+	this.dx = Math.random()*4-2;
+	this.dy = Math.random()*4-2;
 	this.x = x || 0;
 	this.y = y || 0;
 	this.size = 0;
 	this.color = '#'+Math.floor(Math.random()*16777215).toString(16);
+
+	var modes = [LIGHTEST,MULTIPLY];
+	var m = modes[ Math.floor(Math.random()*modes.length) ];
+	this.mode = m;
 }
 
 Atom.prototype.update = function(){
@@ -23,6 +27,7 @@ Atom.prototype.update = function(){
 	
 	stroke( this.color );
 	fill( this.color );
+	blendMode(this.mode);
 	rect( this.x, this.y, 10, 10 );
 }
 
